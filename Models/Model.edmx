@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kiwilandDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accomodation">
+          <Key>
+            <PropertyRef Name="AccomodationId" />
+          </Key>
+          <Property Name="AccomodationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccomodationTypeId" Type="int" Nullable="false" />
+          <Property Name="AccomodationName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AccomodationImage" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AccomodationAddress" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AccomodationPhone" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AccomodationEmail" Type="varchar" MaxLength="100" />
+          <Property Name="AccomodationDesciption" Type="varchar" MaxLength="100" />
+          <Property Name="AccomodationLink" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="AccomodationType">
+          <Key>
+            <PropertyRef Name="AccomodationTypeId" />
+          </Key>
+          <Property Name="AccomodationTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccomodationTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Privilege">
+          <Key>
+            <PropertyRef Name="PrivilegeId" />
+          </Key>
+          <Property Name="PrivilegeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PrivilegeName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="50" />
+          <Property Name="IsAdmin" Type="bit" />
+          <Property Name="HierarchyLevel" Type="int" />
+        </EntityType>
+        <EntityType Name="RolePrivilege">
+          <Key>
+            <PropertyRef Name="RolePrivilegeId" />
+          </Key>
+          <Property Name="RolePrivilegeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PrivilegeId" Type="int" />
+          <Property Name="RoleId" Type="int" />
+        </EntityType>
+        <EntityContainer Name="kiwilandDbModelStoreContainer">
+          <EntitySet Name="Accomodation" EntityType="Self.Accomodation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AccomodationType" EntityType="Self.AccomodationType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Privilege" EntityType="Self.Privilege" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolePrivilege" EntityType="Self.RolePrivilege" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kiwilandDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Accomodation">
+          <Key>
+            <PropertyRef Name="AccomodationId" />
+          </Key>
+          <Property Name="AccomodationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccomodationTypeId" Type="Int32" Nullable="false" />
+          <Property Name="AccomodationName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AccomodationImage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AccomodationAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AccomodationPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AccomodationEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AccomodationDesciption" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AccomodationLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="AccomodationType">
+          <Key>
+            <PropertyRef Name="AccomodationTypeId" />
+          </Key>
+          <Property Name="AccomodationTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccomodationTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Privilege">
+          <Key>
+            <PropertyRef Name="PrivilegeId" />
+          </Key>
+          <Property Name="PrivilegeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrivilegeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <Property Name="HierarchyLevel" Type="Int32" />
+        </EntityType>
+        <EntityType Name="RolePrivilege">
+          <Key>
+            <PropertyRef Name="RolePrivilegeId" />
+          </Key>
+          <Property Name="RolePrivilegeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrivilegeId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="kiwilandDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accomodations" EntityType="Self.Accomodation" />
+          <EntitySet Name="AccomodationTypes" EntityType="Self.AccomodationType" />
+          <EntitySet Name="Privileges" EntityType="Self.Privilege" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="RolePrivileges" EntityType="Self.RolePrivilege" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kiwilandDbModelStoreContainer" CdmEntityContainer="kiwilandDbEntities">
+          <EntitySetMapping Name="Accomodations">
+            <EntityTypeMapping TypeName="kiwilandDbModel.Accomodation">
+              <MappingFragment StoreEntitySet="Accomodation">
+                <ScalarProperty Name="AccomodationId" ColumnName="AccomodationId" />
+                <ScalarProperty Name="AccomodationTypeId" ColumnName="AccomodationTypeId" />
+                <ScalarProperty Name="AccomodationName" ColumnName="AccomodationName" />
+                <ScalarProperty Name="AccomodationImage" ColumnName="AccomodationImage" />
+                <ScalarProperty Name="AccomodationAddress" ColumnName="AccomodationAddress" />
+                <ScalarProperty Name="AccomodationPhone" ColumnName="AccomodationPhone" />
+                <ScalarProperty Name="AccomodationEmail" ColumnName="AccomodationEmail" />
+                <ScalarProperty Name="AccomodationDesciption" ColumnName="AccomodationDesciption" />
+                <ScalarProperty Name="AccomodationLink" ColumnName="AccomodationLink" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AccomodationTypes">
+            <EntityTypeMapping TypeName="kiwilandDbModel.AccomodationType">
+              <MappingFragment StoreEntitySet="AccomodationType">
+                <ScalarProperty Name="AccomodationTypeId" ColumnName="AccomodationTypeId" />
+                <ScalarProperty Name="AccomodationTypeName" ColumnName="AccomodationTypeName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Privileges">
+            <EntityTypeMapping TypeName="kiwilandDbModel.Privilege">
+              <MappingFragment StoreEntitySet="Privilege">
+                <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+                <ScalarProperty Name="PrivilegeName" ColumnName="PrivilegeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="kiwilandDbModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="HierarchyLevel" ColumnName="HierarchyLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePrivileges">
+            <EntityTypeMapping TypeName="kiwilandDbModel.RolePrivilege">
+              <MappingFragment StoreEntitySet="RolePrivilege">
+                <ScalarProperty Name="RolePrivilegeId" ColumnName="RolePrivilegeId" />
+                <ScalarProperty Name="PrivilegeId" ColumnName="PrivilegeId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
