@@ -23,6 +23,8 @@ namespace kiwi.Models.ViewModels
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<bool> IsActive { get; set; }
 
+        public List<AccomodationType> AccomType { get; set; }
+
 
     }
 }
