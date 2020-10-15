@@ -654,11 +654,12 @@ input[type='checkbox'] {
 	font-size: 0;
 }
 
-.navbar-custom .navbar-brand.logo-image img {
-    width: 7.0625rem;
-	height: 2rem;
-	-webkit-backface-visibility: hidden;
-}
+	.navbar-custom .navbar-brand.logo-image img {
+		/*width and height commented for increasing the logo size inline*/
+				width: 7.0625rem;
+				  height: 2rem;
+		-webkit-backface-visibility: hidden;
+	}
 
 .navbar-custom .navbar-brand.logo-text {
 	margin-top: 0.25rem;
