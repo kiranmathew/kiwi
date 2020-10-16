@@ -4,45 +4,27 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Accomodations</h2>
 @*<link href="~/Content/assets/css/css/neon-theme.css" rel="stylesheet" />*@
 @*<link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" />*@
 <link href="~/Content/assets/css/neon.css" rel="stylesheet" />
 @*<link href="~/Content/assets/css/neon-core.css" rel="stylesheet" />*@
+<link href="~/Content/assets/css/font-icons/entypo/css/entypo.css" rel="stylesheet" />
 
 @foreach (var item in Model)
 {
+
     <div class="member-entry">
         <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="~/Content/uploads/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
             <h4> <a href="https://demo.neontheme.com/extra/timeline/"> @item.AccomodationName</a> </h4> <div class="row info-list">
                 <div class="col-sm-4">
                     <i class="entypo-briefcase"></i>
                     Co-Founder at <a href="#">Complete Tech</a>
-                </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">@item.AccomodationEmail</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
+                </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">@item.AccomodationAddress</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">@item.AccomodationEmail</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
             </div>
         </div>
     </div>
 }
 
 
-<div class="member-entry">
-    <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="https://demo.neontheme.com/assets/images/member-1.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
-        <h4> <a href="https://demo.neontheme.com/extra/timeline/">Johnnie Linton</a> </h4> <div class="row info-list">
-            <div class="col-sm-4">
-                <i class="entypo-briefcase"></i>
-                Co-Founder at <a href="#">Complete Tech</a>
-            </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">john@gmail.com</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
-        </div>
-    </div>
-</div>
 
-<div class="member-entry">
-    <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="https://demo.neontheme.com/assets/images/member-1.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
-        <h4> <a href="https://demo.neontheme.com/extra/timeline/">Johnnie Linton</a> </h4> <div class="row info-list">
-            <div class="col-sm-4">
-                <i class="entypo-briefcase"></i>
-                Co-Founder at <a href="#">Complete Tech</a>
-            </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">john@gmail.com</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
-        </div>
-    </div>
-</div>

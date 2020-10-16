@@ -18,6 +18,8 @@ namespace kiwi.Models.ViewModels
         public string AccomodationDesciption { get; set; }
         public string AccomodationLink { get; set; }
         public string Description { get; set; }
+        public string Location { get; set; }
+
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }

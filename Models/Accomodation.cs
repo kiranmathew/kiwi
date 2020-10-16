@@ -28,5 +28,6 @@ namespace kiwi.Models
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }
         public Nullable<bool> IsActive { get; set; }
+        public string Location { get; set; }
     }
 }
