@@ -1,0 +1,458 @@
+
+
+
+/**
+ *
+ * Apply Here your Custom CSS
+ * invoice css
+*/
+body {}
+.customtable{width:96%; height: auto; border: solid 1px #666; margin: 0px auto; overflow: auto; padding:2%;}
+.ad-rig{width:100px; text-align: right;}
+.txtred{color:#f00;}
+.hdcen{width: 146px; margin: 0px auto;}
+.righthd{text-align:center;}
+.in-le b{width: 100%; float: left; font-size: 14px; color: #000;}
+.le-pa{padding-left: .5em!important;}
+.in-le{width: 70%;}
+
+@media only screen and (min-width:0px) and (max-width:500px){
+p{font-size:7px;}
+.inr{font-size:9px!important; font-weight: bold; color: #000;}
+}
+
+@media only screen and (min-width:501px){
+.inr{font-size:16px!important; font-weight: bold; color: #000!important;
+}
+}
+
+@media only screen and (min-width:350px){
+.ad-rig{width:150px;}
+.in-le{width: 70%; margin:0px auto; margin-top: 0px;}
+}
+
+@media only screen and (min-width:400px){
+.in-le{width:130px; margin:0px auto;}
+}
+
+@media only screen and (min-width:450px){
+.in-le{width:130px; margin:0px auto;}
+}
+
+@media only screen and (min-width:500px){
+.in-le{width:146px; margin:0px auto;}
+}
+
+@media only screen and (min-width:815px){
+.customtable{width:70%; height: auto; border: solid 1px #464646; margin: 0px auto; overflow: auto;} 
+.ad-rig{width:172px;}
+.hdcen{width: 146px; margin:0px auto; margin-top:40px;}
+.in-le{width:146px; margin:0px auto;}
+}
+
+@media only screen and (min-width:992px){
+.righthd{text-align:right;} 
+}
+
+.refno{position: absolute;}
+.cu-date{float:right; margin-bottom: 20px;}
+.ad-rig p{margin: 0px!important;}
+.customimg{width:70px; height:70px; float: right; margin-right: 10px;}.customimg img{width:70px; height:70px;}
+.hdout{width: 100%; height: auto; float: left;}
+.righthd h3{font-weight: bold;}
+.fm-out{width: 100%; height:auto; float: left;}
+.fm-in{width: 50%; height: auto; padding: .5em 0em;}.le{float: left;}.ri{float: right;}.ri p{border-bottom: dotted 1px #000;}.al-ce{text-align: center;}
+.fm-in p{font-size: 12px;}
+.btxt{font-weight: bold; font-size: 14px!important;}
+
+.bdn{border-bottom: none!important;}
+.voutb-out{width:90%; height: auto; border: 1px solid #464646; margin:20px auto; overflow: auto; }
+.vbtm{border-bottom: solid 1px #464646; padding: 1em; display: flex; flex-direction:row;}
+.vbtm p{font-size: 12px; width: 100%; margin: 0px;}
+.sm-bor{ padding:1em; flex: auto; border-right: 1px solid #000;} .sm-bor .col-md-12 b{color:#666!important;}.sm-bor .col-md-12 p{color:#949494!important; text-align: left!important;}
+.nonpa{padding:0px; border: none!important;}
+.invoiceout{width: 100%; height: auto; border: 1px solid #464646; margin:20px auto; float: left;}
+.sec-table{width: 100%; height: auto;}
+
+.ma-in-br{width: 100%; height: auto; border: solid 1px #000;}
+.intbout{width: 100%; height:auto;  display: flex; flex-direction:row;}
+.insl{width: 7%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; border-bottom: none!important; border-top:none!important; padding: .5em 0em;}
+.insl-nxt{width:48%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; padding: .5em 0em;}
+.inlast{width: 20%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; padding: .5em 0em;}
+.inhead{font-weight: bold; text-align: center; color: #000;}
+.ribor{border: none!important;}.inhead{border-bottom: solid 1px #000!important;}
+.inle{text-align: left!important;}.inri{text-align:right!important;}.btmbor{border-right:#fff solid 1px; }
+.bttop{border-top: solid 1px #000; }
+.twenty{margin-top: 43px;}
+.terms p{margin: 0px; width: 100%;}
+.tertp{margin-bottom: 10px!important;}
+.signature{width: 30%; float: right; text-align: left; text-transform: uppercase;}
+.web29{text-align: center; font-weight: bold; width: 100%; color:#000;}
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+body {}
+.customtable{width:96%; height: auto; border: solid 1px #666; margin: 0px auto; overflow: auto; padding:2%;}
+.ad-rig{width:100px; text-align: right;}
+.txtred{color:#f00;}
+.hdcen{width: 146px; margin: 0px auto;}
+.righthd{text-align:center;}
+.in-le b{width: 100%; float: left; font-size: 14px; color: #000;}
+.le-pa{padding-left: .5em!important;}
+.in-le{width: 70%;}
+
+@media only screen and (min-width:0px) and (max-width:500px){
+p{font-size:7px;}
+.inr{font-size:9px!important; font-weight: bold; color: #000;}
+}
+
+@media only screen and (min-width:501px){
+.inr{font-size:16px!important; font-weight: bold; color: #000!important;
+}
+}
+
+@media only screen and (min-width:350px){
+.ad-rig{width:150px;}
+.in-le{width: 70%; margin:0px auto; margin-top: 0px;}
+}
+
+@media only screen and (min-width:400px){
+.in-le{width:130px; margin:0px auto;}
+}
+
+@media only screen and (min-width:450px){
+.in-le{width:130px; margin:0px auto;}
+}
+
+@media only screen and (min-width:500px){
+.in-le{width:146px; margin:0px auto;}
+}
+
+@media only screen and (min-width:815px){
+.customtable{width:70%; height: auto; border: solid 1px #464646; margin: 0px auto; overflow: auto;} 
+.ad-rig{width:172px;}
+.hdcen{width: 146px; margin:0px auto; margin-top:40px;}
+.in-le{width:146px; margin:0px auto;}
+}
+
+@media only screen and (min-width:992px){
+.righthd{text-align:right;} 
+}
+
+.refno{position: absolute;}
+.cu-date{float:right; margin-bottom: 20px;}
+.ad-rig p{margin: 0px!important;}
+.customimg{width:70px; height:70px; float: right; margin-right: 10px;}.customimg img{width:70px; height:70px;}
+.hdout{width: 100%; height: auto; float: left;}
+.righthd h3{font-weight: bold;}
+.fm-out{width: 100%; height:auto; float: left;}
+.fm-in{width: 50%; height: auto; padding: .5em 0em;}.le{float: left;}.ri{float: right;}.ri p{border-bottom: dotted 1px #000;}.al-ce{text-align: center;}
+.fm-in p{font-size: 12px;}
+.btxt{font-weight: bold; font-size: 14px!important;}
+
+.bdn{border-bottom: none!important;}
+.voutb-out{width:90%; height: auto; border: 1px solid #464646; margin:20px auto; overflow: auto; }
+.vbtm{border-bottom: solid 1px #464646; padding: 1em; display: flex; flex-direction:row;}
+.vbtm p{font-size: 12px; width: 100%; margin: 0px;}
+.sm-bor{ padding:1em; flex: auto; border-right: 1px solid #000;} .sm-bor .col-md-12 b{color:#666!important;}.sm-bor .col-md-12 p{color:#949494!important; text-align: left!important;}
+.nonpa{padding:0px; border: none!important;}
+.invoiceout{width: 100%; height: auto; border: 1px solid #464646; margin:20px auto; float: left;}
+.sec-table{width: 100%; height: auto;}
+
+.ma-in-br{width: 100%; height: auto; border: solid 1px #000;}
+.intbout{width: 100%; height:auto;  display: flex; flex-direction:row;}
+.insl{width: 7%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; border-bottom: none!important; border-top:none!important; padding: .5em 0em;}
+.insl-nxt{width:48%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; padding: .5em 0em;}
+.inlast{width: 20%; height: auto; border-right: solid 1px #000;  flex: auto; text-align: center; padding: .5em 0em;}
+.inhead{font-weight: bold; text-align: center; color: #000;}
+.ribor{border: none!important;}.inhead{border-bottom: solid 1px #000!important;}
+.inle{text-align: left!important;}.inri{text-align:right!important;}.btmbor{border-right:#fff solid 1px; }
+.bttop{border-top: solid 1px #000; }
+.twenty{margin-top: 43px;}
+.terms p{margin: 0px; width: 100%;}
+.tertp{margin-bottom: 10px!important;}
+.signature{width: 30%; float: right; text-align: left; text-transform: uppercase;}
+.web29{text-align: center; font-weight: bold; width: 100%; color:#000;}
+
+
+
+
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+
+
+
+body {
+	
+}
+.customtable{width:96%; height: auto; border: solid 1px #666; margin: 0px auto; overflow: auto; padding:2%;}
+.ad-rig{width:100px;}
+.txtred{color:#f00;}
+.hdcen{width: 146px; margin: 0px auto;}
+.righthd{text-align:center;}
+@media only screen and (min-width:350px){
+.ad-rig{width:150px;}
+}
+
+
+@media only screen and (min-width:815px){
+ .customtable{width:70%; height: auto; border: solid 1px #464646; margin: 0px auto; overflow: auto;} 
+ .ad-rig{width:172px;}
+ .hdcen{width: 146px; margin:0px auto; margin-top:40px;}
+}
+
+@media only screen and (min-width:992px){
+.righthd{text-align:right;} 
+}
+
+.refno{position: absolute;}
+.cu-date{float:right;}
+.ad-rig p{margin: 0px!important;}
+
+.customimg{width:70px; height:70px; float: right; margin-right: 10px;}.customimg img{width:70px; height:70px;}
+
+.hdout{width: 100%; height: auto; float: left;}
+.righthd h3{font-weight: bold;}
+.fm-out{width: 100%; height:auto; float: left;}
+.fm-in{width: 50%; height: auto; padding: .5em 0em;}.le{float: left;}.ri{float: right;}.ri p{border-bottom: dotted 1px #000;}.al-ce{text-align: center;}
+.fm-in p{font-size: 12px;}
+.btxt{font-weight: bold; font-size: 14px!important;}
+.inr{font-size:16px!important; font-weight: bold; color: #000!important;}
+.bdn{border-bottom: none!important;}
+
+
+
+.text-box {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+}
+
+.w90p {
+    width: 90%;
+}
+.RoomTypeSpan {
+    padding: 33px 14px  !important;
+
+}
+
+.form-control20 {
+  display: block;
+  width: 20%;
+  height: 31px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control20:focus {
+  border-color: #c8cdd7;
+  outline: 0;
+  -moz-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  -webkit-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+}
+.form-control20::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control20:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control20::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control20:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control20:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control20::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control20:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control20::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control20[disabled],
+.form-control20[readonly],
+
+.form-control30 {
+  display: block;
+  width: 30%;
+  height: 31px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control30:focus {
+  border-color: #c8cdd7;
+  outline: 0;
+  -moz-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  -webkit-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+}
+.form-control30::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control30:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control30::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control30:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control30:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control30::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control30:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control30::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control30[disabled],
+.form-control30[readonly],
+
+.form-control50 {
+  display: block;
+  width: 50%;
+  height: 31px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control50:focus {
+  border-color: #c8cdd7;
+  outline: 0;
+  -moz-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  -webkit-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+}
+.form-control50::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control50:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control50::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control50:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control50:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control50::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control50:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control50::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control50[disabled],
+.form-control50[readonly],
+
+.form-control50 {
+  display: block;
+  width: 90%;
+  height: 31px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, -moz-box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control90:focus {
+  border-color: #c8cdd7;
+  outline: 0;
+  -moz-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  -webkit-box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+  box-shadow:  0 2px 1px rgba(203, 208, 217, 0.08);
+}
+.form-control90::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control90:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control90::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control90:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control90:-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control90::-moz-placeholder {
+  color: #aaaaaa;
+}
+.form-control90:-ms-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control90::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+.form-control90[disabled],
+.form-control90[readonly],

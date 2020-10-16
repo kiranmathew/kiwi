@@ -75,7 +75,7 @@ namespace kiwi.Controllers
                     AccModel.AccomodationLink = acc.AccomodationLink;
                     AccModel.AccomodationPhone = acc.AccomodationPhone;
                     AccModel.AccomodationAddress = acc.AccomodationAddress;
-                    AccModel.AccomodationImage = path;
+                    AccModel.AccomodationImage = acc.AccomodationImage;
                     AccModel.Description = acc.Description;
                     AccModel.AccomodationDesciption = acc.AccomodationDesciption;
                     AccModel.AccomodationEmail = acc.AccomodationEmail;

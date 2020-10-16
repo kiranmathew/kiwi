@@ -5,98 +5,44 @@
 }
 
 <h2>Index</h2>
+@*<link href="~/Content/assets/css/css/neon-theme.css" rel="stylesheet" />*@
+@*<link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" />*@
+<link href="~/Content/assets/css/neon.css" rel="stylesheet" />
+@*<link href="~/Content/assets/css/neon-core.css" rel="stylesheet" />*@
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationDesciption)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AccomodationLink)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsDelete)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsActive)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationTypeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationDesciption)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AccomodationLink)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModifiedDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsDelete)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsActive)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AccomodationId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AccomodationId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AccomodationId })
-        </td>
-    </tr>
+@foreach (var item in Model)
+{
+    <div class="member-entry">
+        <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="~/Content/uploads/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
+            <h4> <a href="https://demo.neontheme.com/extra/timeline/"> @item.AccomodationName</a> </h4> <div class="row info-list">
+                <div class="col-sm-4">
+                    <i class="entypo-briefcase"></i>
+                    Co-Founder at <a href="#">Complete Tech</a>
+                </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">@item.AccomodationEmail</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
+            </div>
+        </div>
+    </div>
 }
 
-</table>
+
+<div class="member-entry">
+    <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="https://demo.neontheme.com/assets/images/member-1.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
+        <h4> <a href="https://demo.neontheme.com/extra/timeline/">Johnnie Linton</a> </h4> <div class="row info-list">
+            <div class="col-sm-4">
+                <i class="entypo-briefcase"></i>
+                Co-Founder at <a href="#">Complete Tech</a>
+            </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">john@gmail.com</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
+        </div>
+    </div>
+</div>
+
+<div class="member-entry">
+    <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="https://demo.neontheme.com/assets/images/member-1.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a> <div class="member-details">
+        <h4> <a href="https://demo.neontheme.com/extra/timeline/">Johnnie Linton</a> </h4> <div class="row info-list">
+            <div class="col-sm-4">
+                <i class="entypo-briefcase"></i>
+                Co-Founder at <a href="#">Complete Tech</a>
+            </div> <div class="col-sm-4"> <i class="entypo-twitter"></i> <a href="#"></a> </div> <div class="col-sm-4"> <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a> </div> <div class="clear"></div> <div class="col-sm-4"> <i class="entypo-location"></i> <a href="#">Prishtina</a> </div> <div class="col-sm-4"> <i class="entypo-mail"></i> <a href="#">john@gmail.com</a> </div> <div class="col-sm-4"> <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a> </div>
+        </div>
+    </div>
+</div>
