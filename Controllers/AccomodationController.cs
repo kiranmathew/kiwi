@@ -44,7 +44,7 @@ namespace kiwi.Controllers
 
                 Accomodation AccModel = new Accomodation();
 
-                bool Success = false;
+               // bool Success = false;
 
                 if (ModelState.IsValid)
                 {
@@ -59,14 +59,14 @@ namespace kiwi.Controllers
 
                             System.IO.DirectoryInfo di = new DirectoryInfo(path);
 
-                            foreach (FileInfo files in di.GetFiles())
-                            {
-                                if (files.Name != acc.AccomodationImage)
-                                {
-                                    files.Delete();
-                                }
+                            //foreach (FileInfo files in di.GetFiles())
+                            //{
+                            //    if (files.Name != acc.AccomodationImage)
+                            //    {
+                            //        files.Delete();
+                            //    }
 
-                            }
+                            //}
                         
                     }
 
@@ -76,6 +76,7 @@ namespace kiwi.Controllers
                     AccModel.AccomodationPhone = acc.AccomodationPhone;
                     AccModel.AccomodationAddress = acc.AccomodationAddress;
                     AccModel.AccomodationImage = path;
+                    AccModel.Description = acc.Description;
                     AccModel.AccomodationDesciption = acc.AccomodationDesciption;
                     AccModel.AccomodationEmail = acc.AccomodationEmail;
                     AccModel.CreatedDate = DateTime.Now;
@@ -90,15 +91,6 @@ namespace kiwi.Controllers
                     //    {
                             db.Accomodations.Add(AccModel);
                             int status = db.SaveChanges();
-                            if (status > 0)
-                            {
-                                Success = true;
-                                //trans.Commit();
-                            }
-                            else
-                            {
-                                //trans.Rollback();
-                            }
 
                     //    }
                     //}
@@ -108,7 +100,9 @@ namespace kiwi.Controllers
             }
             catch
             {
-                return View();
+                AccomodationViewModels accVM = new AccomodationViewModels();
+                accVM.AccomType = db.AccomodationTypes.ToList();
+                return View(accVM);
             }
         }
 

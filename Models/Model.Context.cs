@@ -25,10 +25,10 @@ namespace kiwi.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Accomodation> Accomodations { get; set; }
         public virtual DbSet<AccomodationType> AccomodationTypes { get; set; }
         public virtual DbSet<Privilege> Privileges { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RolePrivilege> RolePrivileges { get; set; }
+        public virtual DbSet<Accomodation> Accomodations { get; set; }
     }
 }
