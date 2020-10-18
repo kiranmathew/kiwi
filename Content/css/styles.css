@@ -180,6 +180,17 @@ strong {
 	text-decoration: none;
 }
 
+.grow {
+	transition: all .2s ease-in-out;
+	background-color: rgba(255, 255, 255, 0.31);
+}
+
+	.grow:hover {
+		transform: scale(1.1);
+		
+	}
+}
+
 .btn-outline-reg {
 	display: inline-block;
 	padding: 1.1875rem 1.875rem 1.1875rem 1.875rem;
@@ -777,6 +788,15 @@ input[type='checkbox'] {
 	background-size: cover;
 }
 
+.bg_image {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/details-1-background.jpg') center center no-repeat;
+	background-size: cover;
+}
+
+.bg_image_create {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/project-3.jpg') center center no-repeat;
+	background-size: cover;
+}
 .header .header-content {
 	padding-top: 8rem;
 	padding-bottom: 2.125rem;
