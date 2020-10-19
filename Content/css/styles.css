@@ -665,18 +665,22 @@ input[type='checkbox'] {
 	font-size: 0;
 }
 
-	.navbar-custom .navbar-brand.logo-image img {
+	.navbar-custom .navbar-brand.logo-image {
 		/*width and height commented for increasing the logo size inline*/
 				width: 7.0625rem;
-				  height: 2rem;
+				height: 2rem;
 		-webkit-backface-visibility: hidden;
 	}
-
+.img1 {
+	height :90px ;
+		width:200px;
+		
+}
 .navbar-custom .navbar-brand.logo-text {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
 	font: 700 2.25rem/1.5rem "Montserrat", sans-serif;
-	color: #fff;
+	color: #14bf98;
 	text-decoration: none;
 }
 

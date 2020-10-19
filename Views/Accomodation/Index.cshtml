@@ -32,42 +32,43 @@
 
     <h2>Accomodations</h2>
 
+    <div style="margin-top: 65px">
+        @foreach (var item in Model)
+        {
 
-    @foreach (var item in Model)
-    {
+            <div class="member-entry grow">
 
-        <div class="member-entry grow">
-
-            <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="~/Content/uploads/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a>
-            <div class="member-details">
-                <h4 style="color: #ffffff;"> <a href="https://demo.neontheme.com/extra/timeline/"> @item.AccomodationName</a> </h4>
-                <div class="row info-list">
-                    <div style="color:aliceblue" class="col-sm-4">
-                        <i class="entypo-briefcase"></i>
-                        Co-Founder at <a href="#">Complete Tech</a>
-                    </div>
-                    <div style="color:aqua" class="col-sm-4" >
-                        <i class="entypo-twitter"></i> <a href="#"></a>
-                    </div>
-                    <div style="color:lightskyblue" class="col-sm-4">
-                        <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a>
-                    </div>
-                    <div class="clear">
-                    </div>
-                    <div style="color:red" class="col-sm-4">
-                        <i class="entypo-location"></i> <a href="#">@item.AccomodationAddress</a>
-                    </div>
-                    <div style="color:darkred" class="col-sm-4">
-                        <i class="entypo-mail"></i> <a href="#">@item.AccomodationEmail</a>
-                    </div>
-                    <div style="color:Highlight" class="col-sm-4">
-                        <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>
+                <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="~/Content/uploads/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a>
+                <div class="member-details">
+                    <h4 style="color: #ffffff;"> <a href="https://demo.neontheme.com/extra/timeline/"> @item.AccomodationName</a> </h4>
+                    <div class="row info-list">
+                        <div style="color:aliceblue" class="col-sm-4">
+                            <i class="entypo-briefcase"></i>
+                            Co-Founder at <a href="#">Complete Tech</a>
+                        </div>
+                        <div style="color:aqua" class="col-sm-4">
+                            <i class="entypo-twitter"></i> <a href="#"></a>
+                        </div>
+                        <div style="color:lightskyblue" class="col-sm-4">
+                            <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div style="color:red" class="col-sm-4">
+                            <i class="entypo-location"></i> <a href="#">@item.AccomodationAddress</a>
+                        </div>
+                        <div style="color:darkred" class="col-sm-4">
+                            <i class="entypo-mail"></i> <a href="#">@item.AccomodationEmail</a>
+                        </div>
+                        <div style="color:Highlight" class="col-sm-4">
+                            <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    }
+        }
+    </div>
 
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
