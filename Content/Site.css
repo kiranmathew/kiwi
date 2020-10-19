@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.image_bg {
+    background: url('../Content/images/details-2-background.jpg') no-repeat fixed;
+    background-size: cover;
+}
+

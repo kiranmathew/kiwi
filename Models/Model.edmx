@@ -37,6 +37,33 @@
           <Property Name="IsDelete" Type="bit" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
+        <EntityType Name="EducatiionalInstitutions">
+          <Key>
+            <PropertyRef Name="InstitutionId" />
+          </Key>
+          <Property Name="InstitutionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InstitutionName" Type="varchar" MaxLength="100" />
+          <Property Name="InstituionImages" Type="varchar" MaxLength="200" />
+          <Property Name="InstituionImageId" Type="int" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Link" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="EducationalInstitutionImages">
+          <Key>
+            <PropertyRef Name="ImageId" />
+          </Key>
+          <Property Name="ImageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="100" />
+          <Property Name="ImageDescription" Type="varchar" MaxLength="500" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="Privilege">
           <Key>
             <PropertyRef Name="PrivilegeId" />
@@ -61,12 +88,32 @@
           <Property Name="PrivilegeId" Type="int" />
           <Property Name="RoleId" Type="int" />
         </EntityType>
+        <Association Name="FK_Educatiional_Institution">
+          <End Role="EducationalInstitutionImages" Type="Self.EducationalInstitutionImages" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EducatiionalInstitutions" Type="Self.EducatiionalInstitutions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationalInstitutionImages">
+              <PropertyRef Name="ImageId" />
+            </Principal>
+            <Dependent Role="EducatiionalInstitutions">
+              <PropertyRef Name="InstituionImageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="kiwilandDbModelStoreContainer">
           <EntitySet Name="Accomodation" EntityType="Self.Accomodation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccomodationType" EntityType="Self.AccomodationType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EducatiionalInstitutions" EntityType="Self.EducatiionalInstitutions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EducationalInstitutionImages" EntityType="Self.EducationalInstitutionImages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Privilege" EntityType="Self.Privilege" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RolePrivilege" EntityType="Self.RolePrivilege" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Educatiional_Institution" Association="Self.FK_Educatiional_Institution">
+            <End Role="EducationalInstitutionImages" EntitySet="EducationalInstitutionImages" />
+            <End Role="EducatiionalInstitutions" EntitySet="EducatiionalInstitutions" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -114,6 +161,12 @@
           <EntitySet Name="Roles" EntityType="Self.Role" />
           <EntitySet Name="RolePrivileges" EntityType="Self.RolePrivilege" />
           <EntitySet Name="Accomodations" EntityType="kiwilandDbModel.Accomodation" />
+          <EntitySet Name="EducatiionalInstitutions" EntityType="kiwilandDbModel.EducatiionalInstitution" />
+          <EntitySet Name="EducationalInstitutionImages" EntityType="kiwilandDbModel.EducationalInstitutionImage" />
+          <AssociationSet Name="FK_Educatiional_Institution" Association="kiwilandDbModel.FK_Educatiional_Institution">
+            <End Role="EducationalInstitutionImage" EntitySet="EducationalInstitutionImages" />
+            <End Role="EducatiionalInstitution" EntitySet="EducatiionalInstitutions" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Accomodation">
           <Key>
@@ -135,6 +188,49 @@
           <Property Name="IsActive" Type="Boolean" />
           <Property Name="Location" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="EducatiionalInstitution">
+          <Key>
+            <PropertyRef Name="InstitutionId" />
+          </Key>
+          <Property Name="InstitutionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="InstituionImages" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="InstituionImageId" Type="Int32" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="EducationalInstitutionImage" Relationship="kiwilandDbModel.FK_Educatiional_Institution" FromRole="EducatiionalInstitution" ToRole="EducationalInstitutionImage" />
+        </EntityType>
+        <EntityType Name="EducationalInstitutionImage">
+          <Key>
+            <PropertyRef Name="ImageId" />
+          </Key>
+          <Property Name="ImageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImagePath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ImageDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <NavigationProperty Name="EducatiionalInstitutions" Relationship="kiwilandDbModel.FK_Educatiional_Institution" FromRole="EducationalInstitutionImage" ToRole="EducatiionalInstitution" />
+        </EntityType>
+        <Association Name="FK_Educatiional_Institution">
+          <End Type="kiwilandDbModel.EducationalInstitutionImage" Role="EducationalInstitutionImage" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="kiwilandDbModel.EducatiionalInstitution" Role="EducatiionalInstitution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EducationalInstitutionImage">
+              <PropertyRef Name="ImageId" />
+            </Principal>
+            <Dependent Role="EducatiionalInstitution">
+              <PropertyRef Name="InstituionImageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -199,6 +295,35 @@
                 <ScalarProperty Name="AccomodationName" ColumnName="AccomodationName" />
                 <ScalarProperty Name="AccomodationTypeId" ColumnName="AccomodationTypeId" />
                 <ScalarProperty Name="AccomodationId" ColumnName="AccomodationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EducatiionalInstitutions">
+            <EntityTypeMapping TypeName="kiwilandDbModel.EducatiionalInstitution">
+              <MappingFragment StoreEntitySet="EducatiionalInstitutions">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="InstituionImageId" ColumnName="InstituionImageId" />
+                <ScalarProperty Name="InstituionImages" ColumnName="InstituionImages" />
+                <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EducationalInstitutionImages">
+            <EntityTypeMapping TypeName="kiwilandDbModel.EducationalInstitutionImage">
+              <MappingFragment StoreEntitySet="EducationalInstitutionImages">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ImageDescription" ColumnName="ImageDescription" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageId" ColumnName="ImageId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<kiwi.Models.Accomodation>
+
+@{
+    ViewBag.Title = "ListView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListView</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationTypeId)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.AccomodationTypeName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationEmail)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.AccomodationDesciption)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.AccomodationLink)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationTypeId)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.AccomodationTypeName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationEmail)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.AccomodationDesciption)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.AccomodationLink)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

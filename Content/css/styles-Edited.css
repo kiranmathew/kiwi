@@ -675,7 +675,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-brand.logo-text {
 	margin-top: 0.25rem;
 	margin-bottom: 0.25rem;
-	font: 700 2.25rem/1.5rem "Montserrat", sans-serif;
+	/*font: 700 2.25rem/1.5rem "Montserrat", sans-serif;*/
 	color: #fff;
 	text-decoration: none;
 }
