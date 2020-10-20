@@ -30,7 +30,6 @@ namespace kiwi.Models
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<RolePrivilege> RolePrivileges { get; set; }
         public virtual DbSet<Accomodation> Accomodations { get; set; }
-        public virtual DbSet<EducatiionalInstitution> EducatiionalInstitutions { get; set; }
-        public virtual DbSet<EducationalInstitutionImage> EducationalInstitutionImages { get; set; }
+        public virtual DbSet<EducationalInstitution> EducationalInstitutions { get; set; }
     }
 }

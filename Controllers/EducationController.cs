@@ -2,6 +2,8 @@
 using kiwi.Models.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,8 +16,7 @@ namespace kiwi.Controllers
         kiwilandDbEntities db = new kiwilandDbEntities();
         public ActionResult Index()
         {
-
-            return View(db.EducatiionalInstitutions.ToList());
+            return View(db.EducationalInstitutions.ToList());
         }
 
         // GET: Education/Details/5
@@ -32,18 +33,83 @@ namespace kiwi.Controllers
 
         // POST: Education/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(EducationalnstituteViewModels EduVM, HttpPostedFileBase file)
         {
+             EducationalInstitution EduModel = new EducationalInstitution();
+            // TODO: Add insert logic here
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    string path = "";
 
+                    if (file != null)
+                    {
+                        EduModel.InstituionImage = file.FileName;
+                        path = Server.MapPath("~\\Content\\images\\Education");
+
+                        file.SaveAs(path + file.FileName);
+
+                        System.IO.DirectoryInfo di = new DirectoryInfo(path);
+
+                        //foreach (FileInfo files in di.GetFiles())
+                        //{
+                        //    if (files.Name != acc.AccomodationImage)
+                        //    {
+                        //        files.Delete();
+                        //    }
+
+                        //}
+
+                    }
+                    else
+                    {
+
+                    }
+
+                    EduModel.InstitutionName = EduVM.InstitutionName;
+                    
+                    EduModel.Location = EduVM.Location;
+                    EduModel.Address = EduVM.Address;
+                    EduModel.Email = "";
+                    EduModel.Phone = 123456;
+                    EduModel.Link = EduVM.Link;
+                    EduModel.Description = EduVM.Description;
+                    EduModel.CreatedDate = DateTime.Now;
+                    EduModel.ModifiedDate = DateTime.Now;
+                    EduModel.IsDelete = false;
+
+
+
+                    //using (db = new kiwilandDbEntities())
+                    //{
+                    //    using (DbContextTransaction trans = db.Database.BeginTransaction())
+                    //    {
+                    db.EducationalInstitutions.Add(EduModel);
+                    int status = db.SaveChanges();
+
+                    //    }
+                    //}
+
+                }
                 return RedirectToAction("Index");
             }
-            catch
+            catch (DbEntityValidationException e)
             {
-                return View();
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
             }
+
+
         }
 
         // GET: Education/Edit/5

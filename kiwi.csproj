@@ -142,10 +142,7 @@
     <Compile Include="Models\AccomodationType.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EducatiionalInstitution.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EducationalInstitutionImage.cs">
+    <Compile Include="Models\EducationalInstitution.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Model.Context.cs">
@@ -1727,6 +1724,11 @@
     <Content Include="Content\images\services-3.jpg" />
     <Content Include="Content\External\plugins.css" />
     <Content Include="Content\External\style.css" />
+    <Content Include="Content\images\Accomodation\Bonu Edit.jpg" />
+    <Content Include="Content\images\Accomodation\Capture- Edit.PNG" />
+    <Content Include="Content\images\Accomodation\Capture-1 List.PNG" />
+    <Content Include="Content\images\Accomodation\Capture-Authentication.PNG" />
+    <Content Include="Content\images\Accomodation\dark_bg.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2024,6 +2026,7 @@
     <Folder Include="Content\assets\js\aci-tree\php\tree\Item 7\Item 4\Item 4\" />
     <Folder Include="Content\assets\js\codemirror\bin\" />
     <Folder Include="Content\assets\js\selectboxit\css\" />
+    <Folder Include="Content\images\Education\" />
     <Folder Include="Content\uploads\" />
   </ItemGroup>
   <ItemGroup>

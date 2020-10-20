@@ -57,7 +57,7 @@ namespace kiwi.Controllers
                     if (file != null)
                     {
                             acc.AccomodationImage = file.FileName;
-                            path = Server.MapPath("~\\Content\\Uploads\\");
+                            path = Server.MapPath("~\\Content\\Accomodation\\");
 
                             file.SaveAs(path + file.FileName);
 
