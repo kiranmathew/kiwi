@@ -35,12 +35,10 @@
     <div style="margin-top: 65px">
         @foreach (var item in Model)
         {
-
             <div class="member-entry grow">
-
-                <a href="https://demo.neontheme.com/extra/timeline/" class="member-img"> <img src="~/Content/uploads/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a>
+                <a href="@item.AccomodationLink" class="member-img"> <img src="~/Content/images/Accomodation/@item.AccomodationImage" class="img-rounded"> <i class="entypo-forward"></i> </a>
                 <div class="member-details">
-                    <h4 style="color: #ffffff;"> <a href="https://demo.neontheme.com/extra/timeline/"> @item.AccomodationName</a> </h4>
+                    <h4 style="color: #ffffff;"> <a href="@item.AccomodationLink"> @item.AccomodationName</a> </h4>
                     <div class="row info-list">
                         <div style="color:aliceblue" class="col-sm-4">
                             <i class="entypo-briefcase"></i>
@@ -66,7 +64,6 @@
                     </div>
                 </div>
             </div>
-
         }
     </div>
 

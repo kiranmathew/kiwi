@@ -37,6 +37,33 @@
           <Property Name="IsDelete" Type="bit" />
           <Property Name="IsActive" Type="bit" />
         </EntityType>
+        <EntityType Name="Attraction">
+          <Key>
+            <PropertyRef Name="AttractionId" />
+          </Key>
+          <Property Name="AttractionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AttractionName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="AttractionImage" Type="varchar" MaxLength="50" />
+          <Property Name="AttractionDescription" Type="varchar(max)" />
+          <Property Name="AttractionLocation" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="AttractionLink" Type="varchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
+        <EntityType Name="Communities">
+          <Key>
+            <PropertyRef Name="CommunityId" />
+          </Key>
+          <Property Name="CommunityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CommunityName" Type="varchar" MaxLength="50" />
+          <Property Name="CommunityTypeLocation" Type="varchar" MaxLength="50" />
+          <Property Name="CommunityTypeDescription" Type="varchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="EducationalInstitutions">
           <Key>
             <PropertyRef Name="InstitutionId" />
@@ -81,6 +108,8 @@
         <EntityContainer Name="kiwilandDbModelStoreContainer">
           <EntitySet Name="Accomodation" EntityType="Self.Accomodation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccomodationType" EntityType="Self.AccomodationType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Attraction" EntityType="Self.Attraction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Communities" EntityType="Self.Communities" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EducationalInstitutions" EntityType="Self.EducationalInstitutions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Privilege" EntityType="Self.Privilege" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
@@ -133,6 +162,8 @@
           <EntitySet Name="RolePrivileges" EntityType="Self.RolePrivilege" />
           <EntitySet Name="Accomodations" EntityType="kiwilandDbModel.Accomodation" />
           <EntitySet Name="EducationalInstitutions" EntityType="kiwilandDbModel.EducationalInstitution" />
+          <EntitySet Name="Attractions" EntityType="kiwilandDbModel.Attraction" />
+          <EntitySet Name="Communities" EntityType="kiwilandDbModel.Community" />
         </EntityContainer>
         <EntityType Name="Accomodation">
           <Key>
@@ -167,6 +198,33 @@
           <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Link" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Attraction">
+          <Key>
+            <PropertyRef Name="AttractionId" />
+          </Key>
+          <Property Name="AttractionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AttractionName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AttractionImage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AttractionDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AttractionLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AttractionLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Community">
+          <Key>
+            <PropertyRef Name="CommunityId" />
+          </Key>
+          <Property Name="CommunityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CommunityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CommunityTypeLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CommunityTypeDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
           <Property Name="IsDelete" Type="Boolean" />
@@ -253,6 +311,35 @@
                 <ScalarProperty Name="InstituionImage" ColumnName="InstituionImage" />
                 <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
                 <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Attractions">
+            <EntityTypeMapping TypeName="kiwilandDbModel.Attraction">
+              <MappingFragment StoreEntitySet="Attraction">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="AttractionLink" ColumnName="AttractionLink" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="AttractionLocation" ColumnName="AttractionLocation" />
+                <ScalarProperty Name="AttractionDescription" ColumnName="AttractionDescription" />
+                <ScalarProperty Name="AttractionImage" ColumnName="AttractionImage" />
+                <ScalarProperty Name="AttractionName" ColumnName="AttractionName" />
+                <ScalarProperty Name="AttractionId" ColumnName="AttractionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Communities">
+            <EntityTypeMapping TypeName="kiwilandDbModel.Community">
+              <MappingFragment StoreEntitySet="Communities">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CommunityTypeDescription" ColumnName="CommunityTypeDescription" />
+                <ScalarProperty Name="CommunityTypeLocation" ColumnName="CommunityTypeLocation" />
+                <ScalarProperty Name="CommunityName" ColumnName="CommunityName" />
+                <ScalarProperty Name="CommunityId" ColumnName="CommunityId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

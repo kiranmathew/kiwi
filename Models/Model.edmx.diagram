@@ -11,6 +11,8 @@
         <EntityTypeShape EntityType="kiwilandDbModel.RolePrivilege" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="kiwilandDbModel.Accomodation" Width="1.5" PointX="5.375" PointY="6.75" />
         <EntityTypeShape EntityType="kiwilandDbModel.EducationalInstitution" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.Attraction" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.Community" Width="1.5" PointX="2.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
