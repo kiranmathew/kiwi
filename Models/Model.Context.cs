@@ -33,5 +33,6 @@ namespace kiwi.Models
         public virtual DbSet<EducationalInstitution> EducationalInstitutions { get; set; }
         public virtual DbSet<Attraction> Attractions { get; set; }
         public virtual DbSet<Community> Communities { get; set; }
+        public virtual DbSet<AboutU> AboutUs { get; set; }
     }
 }

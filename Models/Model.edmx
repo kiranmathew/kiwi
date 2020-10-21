@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="kiwilandDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AboutUs">
+          <Key>
+            <PropertyRef Name="AboutUsId" />
+          </Key>
+          <Property Name="AboutUsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Image" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="IsDelete" Type="bit" />
+        </EntityType>
         <EntityType Name="Accomodation">
           <Key>
             <PropertyRef Name="AccomodationId" />
@@ -106,6 +117,7 @@
           <Property Name="RoleId" Type="int" />
         </EntityType>
         <EntityContainer Name="kiwilandDbModelStoreContainer">
+          <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Accomodation" EntityType="Self.Accomodation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccomodationType" EntityType="Self.AccomodationType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Attraction" EntityType="Self.Attraction" Schema="dbo" store:Type="Tables" />
@@ -164,6 +176,7 @@
           <EntitySet Name="EducationalInstitutions" EntityType="kiwilandDbModel.EducationalInstitution" />
           <EntitySet Name="Attractions" EntityType="kiwilandDbModel.Attraction" />
           <EntitySet Name="Communities" EntityType="kiwilandDbModel.Community" />
+          <EntitySet Name="AboutUs" EntityType="kiwilandDbModel.AboutU" />
         </EntityContainer>
         <EntityType Name="Accomodation">
           <Key>
@@ -225,6 +238,17 @@
           <Property Name="CommunityName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CommunityTypeLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CommunityTypeDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDelete" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="AboutU">
+          <Key>
+            <PropertyRef Name="AboutUsId" />
+          </Key>
+          <Property Name="AboutUsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
           <Property Name="IsDelete" Type="Boolean" />
@@ -340,6 +364,18 @@
                 <ScalarProperty Name="CommunityTypeLocation" ColumnName="CommunityTypeLocation" />
                 <ScalarProperty Name="CommunityName" ColumnName="CommunityName" />
                 <ScalarProperty Name="CommunityId" ColumnName="CommunityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AboutUs">
+            <EntityTypeMapping TypeName="kiwilandDbModel.AboutU">
+              <MappingFragment StoreEntitySet="AboutUs">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="AboutUsId" ColumnName="AboutUsId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

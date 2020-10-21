@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="kiwilandDbModel.EducationalInstitution" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="kiwilandDbModel.Attraction" Width="1.5" PointX="0.75" PointY="7.75" />
         <EntityTypeShape EntityType="kiwilandDbModel.Community" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.AboutU" Width="1.5" PointX="7.375" PointY="5.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

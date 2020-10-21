@@ -128,13 +128,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\AccomodationController.cs" />
+    <Compile Include="Controllers\AttractionController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeDisplayController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutU.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Accomodation.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -1701,6 +1706,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\Custom.css" />
     <Content Include="Content\css\fontawesome-all.css" />
     <Content Include="Content\css\magnific-popup.css" />
     <Content Include="Content\css\styles-Edited.css" />
@@ -2017,6 +2023,9 @@
     <Content Include="Views\Accomodation\Edit.cshtml" />
     <Content Include="Views\Education\Create.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Job\CreateJob.cshtml" />
+    <Content Include="Views\Attraction\Index.cshtml" />
+    <Content Include="Views\Attraction\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2034,6 +2043,7 @@
     <Folder Include="Content\assets\js\selectboxit\css\" />
     <Folder Include="Content\images\Education\" />
     <Folder Include="Content\uploads\" />
+    <Folder Include="Views\AboutUs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

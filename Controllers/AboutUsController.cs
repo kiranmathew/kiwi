@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace kiwi.Controllers
 {
-    public class JobController : Controller
+    public class AboutUsController : Controller
     {
-        // GET: Job
+        // GET: AboutUs
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult CreateJob()
         {
             return View();
         }
