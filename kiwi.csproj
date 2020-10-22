@@ -2026,6 +2026,7 @@
     <Content Include="Views\Job\CreateJob.cshtml" />
     <Content Include="Views\Attraction\Index.cshtml" />
     <Content Include="Views\Attraction\Details.cshtml" />
+    <Content Include="Views\Attraction\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2041,6 +2042,7 @@
     <Folder Include="Content\assets\js\aci-tree\php\tree\Item 7\Item 4\Item 4\" />
     <Folder Include="Content\assets\js\codemirror\bin\" />
     <Folder Include="Content\assets\js\selectboxit\css\" />
+    <Folder Include="Content\images\Attraction\" />
     <Folder Include="Content\images\Education\" />
     <Folder Include="Content\uploads\" />
     <Folder Include="Views\AboutUs\" />

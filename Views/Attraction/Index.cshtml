@@ -1,7 +1,7 @@
 ﻿@model List<kiwi.Models.Attraction>
 @{
     ViewBag.Title = "Index";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Attractions</h2>
@@ -10,11 +10,10 @@
 <link href="~/Content/css/Custom.css" rel="stylesheet" />
 <link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" />
 
-
-
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/bootstrap.js"></script>
+
 <div class="gallery-env">
     <div class="row">
         @foreach (var item in Model)
@@ -22,11 +21,11 @@
             <div id="popupid" class="col-sm-4 grow">
                 <article class="album">
                     <header>
-                        <a href="#"> <img src="https://demo.neontheme.com/assets/images/album-thumb-1.jpg"> </a> <a href="#" class="album-options">
+                        <a href="#"> <img src="~/Content/images/Attraction/@item.AttractionImage" height="240" width="320"> </a> <a href="#" class="album-options">
                             <i class="entypo-cog"></i>
-                            Change Cover
+                            
                         </a>
-                    </header> <section class="album-info"> <h3><a href="https://demo.neontheme.com/extra/gallery-single/">@item.AttractionName</a></h3> <p>Can curiosity may end shameless explained. True high on said mr on come. </p> </section> <footer>
+                    </header> <section class="album-info"> <h3><a href="https://demo.neontheme.com/extra/gallery-single/">@item.AttractionName</a></h3> <p>@item.AttractionLocation </p> </section> <footer>
                         <div class="album-images-count">
                             <i class="entypo-picture"></i>
                             @item.AttractionId

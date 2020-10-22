@@ -1,6 +1,8 @@
 ﻿using kiwi.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -30,17 +32,51 @@ namespace kiwi.Controllers
 
         // POST: Attraction/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Attraction Att,HttpPostedFileBase file)
         {
             try
             {
-                // TODO: Add insert logic here
+                if(ModelState.IsValid)
+                {
+                    string path = "";
 
-                return RedirectToAction("Index");
+                    if (file != null)
+                    {
+                        Att.AttractionImage = file.FileName;
+                        path = Server.MapPath("~\\Content\\images\\Attraction\\");
+                        file.SaveAs(path + file.FileName);
+                        System.IO.DirectoryInfo di = new DirectoryInfo(path);
+                    }
+                    else
+                    {
+                        Att.AttractionImage = "";
+                    }
+                    // TODO: Add insert logic here
+                    Att.CreatedDate = DateTime.Now;
+                    Att.ModifiedDate = DateTime.Now;
+                    Att.IsDelete = false;
+
+
+                    db.Attractions.Add(Att);
+                    int status = db.SaveChanges();
+                }                
+                   return RedirectToAction("Index");
+                          
+                
             }
-            catch
+            catch (DbEntityValidationException e)
             {
-                return View();
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
             }
         }
 
