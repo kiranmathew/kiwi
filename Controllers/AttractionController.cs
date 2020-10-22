@@ -19,9 +19,9 @@ namespace kiwi.Controllers
         }
 
         // GET: Attraction/Details/5
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
-            return View();
+            return View(db.Attractions.Find(id));
         }
 
         // GET: Attraction/Create

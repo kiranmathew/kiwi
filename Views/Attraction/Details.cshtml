@@ -1,4 +1,4 @@
-﻿
+﻿@model kiwi.Models.Attraction
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutPage2.cshtml";
@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-8">
             <div class="blog-post-single">
-                <a href="#" class="image"> <img src="https://demo.neontheme.com/assets/frontend/images/portfolio-img-large-5.png" class="img-responsive img-rounded"> </a> <div class="post-details">
+                <a href="#" class="image"> <img src="~/Content/images/Attraction/@Model.AttractionImage" class="img-responsive img-rounded"> </a> <div class="post-details">
                     <h3> <a href="https://demo.neontheme.com/frontend/blog-post/">We hill lady will both sang room by</a> </h3> <div class="post-meta">
                         <div class="meta-info"> <i class="entypo-calendar"></i> 21 October 2020</div> <div class="meta-info">
                             <i class="entypo-comment"></i>
