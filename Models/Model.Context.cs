@@ -34,5 +34,8 @@ namespace kiwi.Models
         public virtual DbSet<Attraction> Attractions { get; set; }
         public virtual DbSet<Community> Communities { get; set; }
         public virtual DbSet<AboutU> AboutUs { get; set; }
+        public virtual DbSet<Job> Jobs { get; set; }
+        public virtual DbSet<JobType> JobTypes { get; set; }
+        public virtual DbSet<PayType> PayTypes { get; set; }
     }
 }

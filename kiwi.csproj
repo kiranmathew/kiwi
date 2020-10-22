@@ -156,6 +156,12 @@
     <Compile Include="Models\EducationalInstitution.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Job.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\JobType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -170,6 +176,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PayType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Privilege.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -1713,6 +1722,9 @@
     <Content Include="Content\css\styles.css" />
     <Content Include="Content\css\swiper.css" />
     <Content Include="Content\images\about.jpg" />
+    <Content Include="Content\images\AboutUs\about.jpg" />
+    <Content Include="Content\images\AboutUs\new-zealand-physical-map.jpg" />
+    <Content Include="Content\images\AboutUs\new_zealand_map.png" />
     <Content Include="Content\images\details-1-background.jpg" />
     <Content Include="Content\images\details-2-background.jpg" />
     <Content Include="Content\images\down-arrow.png" />
@@ -2009,9 +2021,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
     <Content Include="Views\Accomodation\Index.cshtml" />
     <Content Include="Views\Accomodation\Create.cshtml" />
     <Content Include="Views\Job\Index.cshtml" />
