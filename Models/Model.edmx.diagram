@@ -14,6 +14,9 @@
         <EntityTypeShape EntityType="kiwilandDbModel.Attraction" Width="1.5" PointX="0.75" PointY="7.75" />
         <EntityTypeShape EntityType="kiwilandDbModel.Community" Width="1.5" PointX="2.75" PointY="7.75" />
         <EntityTypeShape EntityType="kiwilandDbModel.AboutU" Width="1.5" PointX="7.375" PointY="5.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.Job" Width="1.5" PointX="7.375" PointY="8.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.JobType" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="kiwilandDbModel.PayType" Width="1.5" PointX="9.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
