@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_Layout_New.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -86,7 +86,7 @@
                 <div class="form-group">
                     @Html.LabelFor(model => model.AccomodationDesciption, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.EditorFor(model => model.AccomodationDesciption, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.TextAreaFor(model => model.AccomodationDesciption, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.AccomodationDesciption, "", new { @class = "text-danger" })
                     </div>
                 </div>
