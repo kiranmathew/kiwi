@@ -22,16 +22,22 @@
             <div id="popupid" class="col-sm-4 grow">
                 <article class="album">
                     <header>
+                        <div style="height:240px; width:320px; ">
+                            <a href=""> <img src="~/Content/images/Attraction/@item.AttractionImage"> </a> <a href="#" class="album-options">
+                                <i class="entypo-cog"></i>
+                            </a>
+                        </div>
                         @*@Html.ActionLink("Edit", "Edit", new { id = item.EmailCredentialID }, new { @class = "btn btn-info" })*@
 
-                        <a href=""> <img src="~/Content/images/Attraction/@item.AttractionImage" height="240" width="320"> </a> <a href="#" class="album-options">
-                            <i class="entypo-cog"></i>
 
-                        </a>
-                    </header> <section class="album-info"> <h3><a href="https://demo.neontheme.com/extra/gallery-single/">@item.AttractionName</a></h3> <p>@item.AttractionLocation </p> </section> <footer>
-                        <div class="album-images-count">
-                            <i class="entypo-picture"></i>                            
-                        </div> <div class="album-options"> <a href="#"> <i class="entypo-cog"></i> </a> <a href="#"> <i class="entypo-trash"></i> </a> </div>
+                    </header> 
+                    <section class="album-info"> <h3><a href="https://demo.neontheme.com/extra/gallery-single/">@item.AttractionName</a></h3> <p>@item.AttractionLocation </p> </section> 
+                    <footer>
+                        @Html.ActionLink("View", "Details", "Attraction", new { id = item.AttractionId }, new { @class = "btn btn-primary btn-lg btn-block" })
+                        @*<div class="album-images-count">
+                            <i class="entypo-picture"></i>
+                        </div> 
+                        <div class="album-options"> <a href="#"> <i class="entypo-cog"></i> </a> <a href="#"> <i class="entypo-trash"></i> </a> </div>*@
                     </footer>
                 </article>
             </div>
@@ -46,14 +52,15 @@
     //    });
     //});
 
-    $('body').on('click', "#popupid", function () {
-        var attractionId = $("#hdnAttractionId").val();
-       // var url = 'ReceiptPdfPrint' + '?regid=' + transid;
-        //window.location.href = url;
-        var url = '/Attraction/Details' + '?id=' + attractionId;
-        //window.location.href = url;
-      window.open(url, '_blank');
-    });
+    //$('body').on('click', "#popupid", function () {
+    //    var attractionId = $("#hdnAttractionId").val();
+    //   // var url = 'ReceiptPdfPrint' + '?regid=' + transid;
+    //    //window.location.href = url;
+    //    var url = '/Attraction/Details' + '?id=' + attractionId;
+    //    //window.location.href = url;
+    //    window.open(url, '_blank');
+        
+    //});
 </script>
 
 @*<div class="modal fade custom-width in" id="album-cover-options" style="display: block;">
