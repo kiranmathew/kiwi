@@ -2029,6 +2029,7 @@
     <Content Include="Views\Attraction\Create.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
     <Content Include="Views\Shared\_LayoutPage3.cshtml" />
+    <Content Include="Views\AboutUs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2047,7 +2048,6 @@
     <Folder Include="Content\images\Attraction\" />
     <Folder Include="Content\images\Education\" />
     <Folder Include="Content\uploads\" />
-    <Folder Include="Views\AboutUs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
