@@ -1,60 +1,74 @@
-﻿
+﻿@model kiwi.Models.ViewModels.JobViewModel
+
 @{
     ViewBag.Title = "CreateJob";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>CreateJob</h2>
 
 
-<div class="job-box bg-white mt-4">
-    <div class="p-4">
-        <div class="row align-items-center">
-            <div class="col-md-2">
-                <div class="mo-mb-2">
-                    <img src="images/featured-job/img-1.png" alt="" class="img-fluid mx-auto d-block">
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <h5 class="f-18"><a href="#" class="text-dark">Web Developer</a></h5>
-                    <p class="text-muted mb-0">Web Technology pvt.Ltd</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <p class="text-muted mb-0"><i class="mdi mdi-map-marker text-custom mr-2"></i>Oakridge Lane Richardson</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-custom">$</span>1000-1200/m</p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div>
-                    <p class="text-muted mb-0">Full Time</p>
-                </div>
-            </div>
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>JobViewModel</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.Label("PayType", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.PayTypeId, new SelectList(Model.payTypeList, "PayTypeId", "PayTypeName"), "Select", new { @class = "form-control", @required = "required" })
+            @Html.ValidationMessageFor(model => model.PayTypeId, "", new { @class = "text-danger" })
         </div>
     </div>
-    <div class="p-3 bg-light">
-        <div class="row">
-            <div class="col-md-4">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-dark">Experience :</span> 1 - 2 years</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div>
-                    <p class="text-muted mb-0 mo-mb-2"><span class="text-dark">Notes :</span> languages only differ in their grammar. </p>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div>
-                    <a href="#" class="text-custom">Apply Now <i class="mdi mdi-chevron-double-right"></i></a>
-                </div>
-            </div>
+
+    <div class="form-group">
+        @Html.Label("Job Title", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobTitile, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobTitile, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Job Description", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobDescription, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobDescription, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Location", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobLocation, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobLocation, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Date", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.JobPostDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.JobPostDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
         </div>
     </div>
 </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
