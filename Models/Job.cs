@@ -24,5 +24,7 @@ namespace kiwi.Models
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> ModifiedDate { get; set; }
         public Nullable<bool> IsDelete { get; set; }
+        public string Company { get; set; }
+        public string SiteLink { get; set; }
     }
 }

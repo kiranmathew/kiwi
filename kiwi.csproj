@@ -192,7 +192,6 @@
     <Compile Include="Models\ViewModels\AccomodationViewModels.cs" />
     <Compile Include="Models\ViewModels\EducationalnstituteViewModels.cs" />
     <Compile Include="Models\ViewModels\HomepageViewModels.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2272,14 +2271,12 @@
     <Content Include="Views\Accomodation\Edit.cshtml" />
     <Content Include="Views\Education\Create.cshtml" />
     <Content Include="Views\Education\Index.cshtml" />
-    <Content Include="Views\Job\CreateJob.cshtml" />
     <Content Include="Views\Attraction\Index.cshtml" />
     <Content Include="Views\Attraction\Details.cshtml" />
     <Content Include="Views\Attraction\Create.cshtml" />
     <Content Include="Views\Shared\View.cshtml" />
     <Content Include="Views\Shared\_LayoutPage3.cshtml" />
     <Content Include="Views\AboutUs\Index.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

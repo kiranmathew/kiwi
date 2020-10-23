@@ -100,8 +100,10 @@
           <Property Name="JobTypeId" Type="int" Nullable="false" />
           <Property Name="PayTypeId" Type="int" Nullable="false" />
           <Property Name="JobTitile" Type="varchar" MaxLength="100" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
           <Property Name="JobDescription" Type="varchar(max)" />
           <Property Name="JobLocation" Type="varchar" MaxLength="100" />
+          <Property Name="SiteLink" Type="varchar" MaxLength="100" />
           <Property Name="JobPostDate" Type="datetime" />
           <Property Name="CreatedDate" Type="datetime" />
           <Property Name="ModifiedDate" Type="datetime" />
@@ -308,6 +310,8 @@
           <Property Name="CreatedDate" Type="DateTime" Precision="3" />
           <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
           <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SiteLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="JobType">
           <Key>
@@ -458,6 +462,8 @@
           <EntitySetMapping Name="Jobs">
             <EntityTypeMapping TypeName="kiwilandDbModel.Job">
               <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="SiteLink" ColumnName="SiteLink" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
                 <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
                 <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
                 <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
