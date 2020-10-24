@@ -36,7 +36,7 @@ namespace kiwi.Controllers
         public ActionResult Create(EducationalnstituteViewModels EduVM, HttpPostedFileBase file)
         {
              EducationalInstitution EduModel = new EducationalInstitution();
-            // TODO: Add insert logic here
+             //TODO: Add insert logic here
             try
             {
                 if (ModelState.IsValid)
