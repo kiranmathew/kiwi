@@ -192,6 +192,7 @@
     <Compile Include="Models\ViewModels\AccomodationViewModels.cs" />
     <Compile Include="Models\ViewModels\EducationalnstituteViewModels.cs" />
     <Compile Include="Models\ViewModels\HomepageViewModels.cs" />
+    <Compile Include="Models\ViewModels\JobViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
