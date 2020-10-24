@@ -14,11 +14,8 @@ namespace kiwi.Controllers
 
         // GET: Job
         public ActionResult Index()
-        {
-            
-            var Data = db.Database.SqlQuery<JobViewModel>("GetAllJobData").ToList();
-            
-
+        {            
+            var Data = db.Database.SqlQuery<JobViewModel>("GetAllJobData").ToList(); 
             return View(Data);
         }
         public ActionResult CreateJob()
