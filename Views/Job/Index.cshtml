@@ -4,4 +4,38 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Index</h2>
+
+<link href="~/Content/assets/css/neon-theme-edited.css" rel="stylesheet" />
+
+<div class="member-entry grow">
+    <a href="Link" class="member-img"> <img src="~/Content/images/Accomodation/dark_bg.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a>
+    <div class="member-details">
+        <h4 style="color: #ffffff;"> <a href="Link">InstitutionName</a> </h4>
+        <div class="row info-list">
+            <div style="color:aliceblue" class="col-sm-4">
+                <i class="entypo-briefcase"></i>
+                <a href="#">Location: Location</a>
+            </div>
+            <div style="color:aqua" class="col-sm-4">
+                @*<i class="entypo-twitter"></i> <a href="#"></a>*@
+            </div>
+            <div style="color:lightskyblue" class="col-sm-4">
+                @*<i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a>*@
+            </div>
+            <div class="clear">
+            </div>
+            <div style="color:red" class="col-sm-4">
+                <i class="entypo-location"></i>Address: Address
+            </div>
+            <div style="color:darkred" class="col-sm-4">
+                <i class="entypo-mail"></i> Email: Email
+            </div>
+            <div style="color:Highlight" class="col-sm-4">
+                @* <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>*@
+            </div>
+            <div style="color:Highlight" class="col-sm-12">
+                <i class="entypo-database"></i>Description: Description
+            </div>
+        </div>
+    </div>
+</div>

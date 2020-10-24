@@ -19,38 +19,45 @@
     @*<link href="~/Content/assets/css/neon-rtl.css" rel="stylesheet" />*@
     @*<link href="~/Content/css/styles.css" rel="stylesheet" />*@
     <link href="~/Content/assets/css/font-icons/entypo/css/entypo.css" rel="stylesheet" />
-    <title>Hello, world!</title>
+    <title>Institution</title>
 </head>
 <body>
-    <div class="member-entry grow">
-        <a href="AccomodationLink" class="member-img"> <img src="~/Content/images/Accomodation/dark_bg.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a>
-        <div class="member-details">
-            <h4 style="color: #ffffff;"> <a href="AccomodationLink"> AccomodationName</a> </h4>
-            <div class="row info-list">
-                <div style="color:aliceblue" class="col-sm-4">
-                    <i class="entypo-briefcase"></i>
-                    Location <a href="#">Location</a>
-                </div>
-                <div style="color:aqua" class="col-sm-4">
-                    <i class="entypo-twitter"></i> <a href="#"></a>
-                </div>
-                <div style="color:lightskyblue" class="col-sm-4">
-                    <i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a>
-                </div>
-                <div class="clear">
-                </div>
-                <div style="color:red" class="col-sm-4">
-                    <i class="entypo-location"></i>Address <a href="#">AccomodationAddress</a>
-                </div>
-                <div style="color:darkred" class="col-sm-4">
-                    <i class="entypo-mail"></i> Email <a href="#">AccomodationEmail</a>
-                </div>
-                <div style="color:Highlight" class="col-sm-4">
-                    <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>
+    @foreach (var item in Model)
+    {
+        <div class="member-entry grow">
+            <a href="@item.Link" class="member-img"> <img src="~/Content/images/Accomodation/dark_bg.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a>
+            <div class="member-details">
+                <h4 style="color: #ffffff;"> <a href="@item.Link">@item.InstitutionName</a> </h4>
+                <div class="row info-list">
+                    <div style="color:aliceblue" class="col-sm-4">
+                        <i class="entypo-briefcase"></i>
+                        <a href="#">Location: @item.Location</a>
+                    </div>
+                    <div style="color:aqua" class="col-sm-4">
+                        @*<i class="entypo-twitter"></i> <a href="#"></a>*@
+                    </div>
+                    <div style="color:lightskyblue" class="col-sm-4">
+                        @*<i class="entypo-facebook"></i> <a href="#">fb.me/johnnie</a>*@
+                    </div>
+                    <div class="clear">
+                    </div>
+                    <div style="color:red" class="col-sm-4">
+                        <i class="entypo-location"></i>Address: @item.Address
+                    </div>
+                    <div style="color:darkred" class="col-sm-4">
+                        <i class="entypo-mail"></i> Email: @item.Email
+                    </div>
+                    <div style="color:Highlight" class="col-sm-4">
+                        @* <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>*@
+                    </div>
+                    <div style="color:Highlight" class="col-sm-12">
+                        <i class="entypo-database"></i>Description: @item.Description
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    }
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
