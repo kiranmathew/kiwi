@@ -16,7 +16,7 @@ namespace kiwi.Controllers
         public ActionResult Index()
         {
             
-            var Data = db.Database.SqlQuery<JobViewModel>("GetAllJobData").ToString();
+            var Data = db.Database.SqlQuery<JobViewModel>("GetAllJobData").ToList();
             
 
             return View(Data);
