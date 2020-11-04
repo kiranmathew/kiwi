@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
 <h2>Index</h2>
@@ -14,14 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">*@
     <link href="~/Content/assets/css/neon-theme-edited.css" rel="stylesheet" />
     @*<link href="~/Content/assets/css/neon-rtl.css" rel="stylesheet" />*@
     @*<link href="~/Content/css/styles.css" rel="stylesheet" />*@
     <link href="~/Content/assets/css/font-icons/entypo/css/entypo.css" rel="stylesheet" />
     <title>Institution</title>
 </head>
-<body>
+<body style="background: url('../Content/images/details-1-background.jpg') no-repeat fixed; background-size: cover;">
     @foreach (var item in Model)
     {
         <div class="member-entry grow">

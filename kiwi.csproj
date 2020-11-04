@@ -1728,6 +1728,7 @@
     <Content Include="Content\images\AboutUs\about.jpg" />
     <Content Include="Content\images\AboutUs\new-zealand-physical-map.jpg" />
     <Content Include="Content\images\AboutUs\new_zealand_map.png" />
+    <Content Include="Content\images\AboutUs\new_zealand_map1.png" />
     <Content Include="Content\images\details-1-background.jpg" />
     <Content Include="Content\images\details-2-background.jpg" />
     <Content Include="Content\images\down-arrow.png" />
