@@ -17,15 +17,16 @@
 
     <title>Attraction</title>
 </head>
-<body style="background: url('../Content/images/details-1-background.jpg') no-repeat fixed; background-size: cover; padding-top:5em">
+<body style="background: url('../../Content/images/details-1-background.jpg') no-repeat fixed;
+        background-size: cover;" data-spy="scroll" data-target=".fixed-top">
 
-    @Model.AttractionName
+    <h2 style="color:antiquewhite">@Model.AttractionName</h2>  
 
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
                 <div class="blog-post-single">
-                    <div style="border:double">
+                    <div style="background-color:black;border:double;padding:10px">
                         <a href="#" class="image"> <img src="~/Content/images/Attraction/@Model.AttractionImage" class="img-responsive img-rounded"> </a> <div class="post-details">
                         </div>
                         <h3> <a href="https://demo.neontheme.com/frontend/blog-post/">  </a> </h3> <div class="post-meta">
@@ -37,7 +38,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post-content">  <span style=""> @Model.AttractionDescription </span>  </div> <br>
+                    <div style="color:white;padding-top:20px" class="post-content">  <span style=""> @Model.AttractionDescription </span>  </div> <br>
                 </div>
             </div>
             <!--<div class="col-sm-4">-->

@@ -17,10 +17,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 @*@Html.ActionLink("Application name", "About", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
-            <a href="~/Home/About" >  <img src="~/content/images/logo_design.gif" height="60" width="110" />  </a>
+                <a href="~/Home/About">  <img src="~/content/images/logo_design.gif" height="60" width="110" />  </a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav ml-auto">
                     <li>@Html.ActionLink("Home", "About", "Home")</li>
                     <li>@Html.ActionLink("Accomodation", "Index", "Accomodation")</li>
                     <li>@Html.ActionLink("Job", "Index", "Job")</li>
@@ -30,6 +30,11 @@
                 </ul>
             </div>
         </div>
+        <style>
+            .navbar-nav {
+                margin-left: 350px;
+            }
+        </style>
     </div>
     <div class="container body-content">
         @RenderBody()

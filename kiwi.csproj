@@ -133,7 +133,6 @@
     <Compile Include="Controllers\AttractionController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HomeDisplayController.cs" />
     <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1728,7 +1727,6 @@
     <Content Include="Content\images\AboutUs\about.jpg" />
     <Content Include="Content\images\AboutUs\new-zealand-physical-map.jpg" />
     <Content Include="Content\images\AboutUs\new_zealand_map.png" />
-    <Content Include="Content\images\AboutUs\new_zealand_map1.png" />
     <Content Include="Content\images\details-1-background.jpg" />
     <Content Include="Content\images\details-2-background.jpg" />
     <Content Include="Content\images\down-arrow.png" />
@@ -1757,6 +1755,7 @@
     <Content Include="Content\images\Accomodation\Capture-1 List.PNG" />
     <Content Include="Content\images\Accomodation\Capture-Authentication.PNG" />
     <Content Include="Content\images\Accomodation\dark_bg.jpg" />
+    <Content Include="Content\images\up-arrow.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
-<h2>Index</h2>
+<h2 style="color:antiquewhite"> Institutions </h2>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +19,16 @@
     @*<link href="~/Content/assets/css/neon-rtl.css" rel="stylesheet" />*@
     @*<link href="~/Content/css/styles.css" rel="stylesheet" />*@
     <link href="~/Content/assets/css/font-icons/entypo/css/entypo.css" rel="stylesheet" />
-    <title>Institution</title>
+
+
+    <link href="~/Content/css/Custom.css" rel="stylesheet" />
+    <title>Institutions</title>
 </head>
 <body style="background: url('../Content/images/details-1-background.jpg') no-repeat fixed; background-size: cover;">
     @foreach (var item in Model)
     {
         <div class="member-entry grow">
-            <a href="@item.Link" class="member-img"> <img src="~/Content/images/Accomodation/dark_bg.jpg" class="img-rounded"> <i class="entypo-forward"></i> </a>
+            <a href="@item.Link" class="member-img"> <img src="~/Content/images/Accomodation/@item.InstituionImage" class="img-rounded"> <i class="entypo-forward"></i> </a>
             <div class="member-details">
                 <h4 style="color: #ffffff;"> <a href="@item.Link">@item.InstitutionName</a> </h4>
                 <div class="row info-list">
@@ -41,17 +44,17 @@
                     </div>
                     <div class="clear">
                     </div>
-                    <div style="color:red" class="col-sm-4">
-                        <i class="entypo-location"></i>Address: @item.Address
+                    <div style="color:aliceblue" class="col-sm-4">
+                        Address:<i class="entypo-location"></i> @item.Address
                     </div>
                     <div style="color:darkred" class="col-sm-4">
-                        <i class="entypo-mail"></i> Email: @item.Email
+                       <i class="entypo-phone"></i> Phone: @item.Phone
                     </div>
                     <div style="color:Highlight" class="col-sm-4">
                         @* <i class="entypo-linkedin"></i> <a href="#">johnkennedy</a>*@
                     </div>
                     <div style="color:Highlight" class="col-sm-12">
-                        <i class="entypo-database"></i>Description: @item.Description
+                        @*<i class="entypo-database"></i>Description: @item.Description*@
                     </div>
                 </div>
             </div>
@@ -60,8 +63,8 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    @*<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>*@
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>*@
 </body>
 </html>
