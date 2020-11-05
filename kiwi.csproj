@@ -2258,9 +2258,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index1.cshtml" />
     <Content Include="Views\Accomodation\Index.cshtml" />
     <Content Include="Views\Accomodation\Create.cshtml" />
     <Content Include="Views\Job\Index.cshtml" />
