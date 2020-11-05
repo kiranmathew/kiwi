@@ -45,6 +45,8 @@ namespace kiwi.Controllers
                     JobModel.JobLocation = jobVM.JobLocation;
                     JobModel.JobDescription = jobVM.JobDescription;   
                     JobModel.JobPostDate = jobVM.JobPostDate;
+                    JobModel.Company = jobVM.Company;
+                    JobModel.SiteLink = jobVM.SiteLink;
                     JobModel.CreatedDate = DateTime.Now;
                     JobModel.ModifiedDate = DateTime.Now;
                     JobModel.IsDelete = false;                    

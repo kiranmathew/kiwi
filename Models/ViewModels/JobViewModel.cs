@@ -19,7 +19,8 @@ namespace kiwi.Models.ViewModels
         public Nullable<bool> IsDelete { get; set; }
 
 
-       
+        public string Company { get; set; }
+        public string SiteLink { get; set; }
         public string JobTypeName { get; set; }
 
         public string PayType { get; set; }
