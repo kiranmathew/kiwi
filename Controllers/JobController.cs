@@ -59,8 +59,8 @@ namespace kiwi.Controllers
             }
             catch
             {
-                AccomodationViewModels accVM = new AccomodationViewModels();
-                accVM.AccomType = db.AccomodationTypes.ToList();
+                JobViewModel accVM = new JobViewModel();
+                accVM.payTypeList = db.PayTypes.ToList();
                 return View(accVM);
             }
         }
